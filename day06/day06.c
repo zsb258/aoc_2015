@@ -1,9 +1,8 @@
-
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#define FILENAME "day6.in"
+#define FILENAME "day06.in"
 #define LINES 300
 #define GRID_SIZE 1000
 
@@ -86,6 +85,8 @@ int main() {
 
   printf("Part 1: %d\n", solve_with(input, LINES, part1_solver));
   printf("Part 2: %d\n", solve_with(input, LINES, part2_solver));
+
+  free(input);
 }
 
 int solve_with(struct Instruction *input, int len,
@@ -106,6 +107,9 @@ int solve_with(struct Instruction *input, int len,
   for (int i = 0; i < GRID_SIZE * GRID_SIZE; i++) {
     count += grid[i];
   }
+
+  free(grid);
+
   return count;
 }
 
