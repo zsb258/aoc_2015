@@ -7,7 +7,7 @@ int part2(char *input, int len);
 int main() {
   FILE *fp;
   char buff[7000];
-  fp = fopen("day1.in", "r");
+  fp = fopen("day01.in", "r");
   fscanf(fp, "%s", buff);
 
   printf("Part 1:%d\n", part1(buff, 7000));
@@ -34,7 +34,7 @@ int part2(char input[], int len) {
   int i = 0;
   int curr = 0;
 
-  for (; curr >= 0; i++) {
+  for (; curr >= 0 && i < len; i++) {
     if (input[i] == '(') {
       curr++;
     } else if (input[i] == ')') {
