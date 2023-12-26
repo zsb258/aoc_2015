@@ -15,7 +15,7 @@ int main() {
   FILE *fp;
   struct box input[1000];
 
-  fp = fopen("day2.in", "r");
+  fp = fopen("day02.in", "r");
   for (int i = 0; i < 1000; i++) {
     int x, y, z;
     fscanf(fp, "%d%*c%d%*c%d\n", &x, &y, &z);
