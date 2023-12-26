@@ -1,4 +1,3 @@
-
 #include <assert.h>
 #include <openssl/md5.h>
 #include <stdio.h>
@@ -7,7 +6,7 @@
 
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations" // for MD5
 
-#define FILENAME "day4.in"
+#define FILENAME "day04.in"
 
 int compute(char *input, int start, int numMatch);
 
@@ -73,11 +72,15 @@ int compute(char input[], int start, int numMatch) {
         break;
       }
       if (j == numMatch - 1) {
+        free(s);
+        free(numStr);
         return num;
       }
     }
 
     num++;
+
+    free(hex);
   }
 }
 
