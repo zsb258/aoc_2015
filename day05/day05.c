@@ -1,10 +1,9 @@
-
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#define FILENAME "day5.in"
+#define FILENAME "day05.in"
 #define LINE_LEN 16
 #define LINES 1000
 
@@ -31,6 +30,8 @@ int main() {
 
   printf("Part 1: %d\n", solve_with(input, isGood1));
   printf("Part 2: %d\n", solve_with(input, isGood2));
+
+  free(input);
 }
 
 int solve_with(char *input, int (*pred)(char *input, int len)) {
