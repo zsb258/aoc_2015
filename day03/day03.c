@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define FILENAME "day3.in"
+#define FILENAME "day03.in"
 #define MAX 8192
 
 void example();
@@ -69,6 +69,8 @@ int part1(char input[], int len) {
     count += step(seen, input[i], &x, &y, len * 2);
   }
 
+  free(seen);
+
   return count;
 }
 
@@ -89,6 +91,9 @@ int part2(char input[], int len) {
       count += step(seen, input[i], &x2, &y2, len * 2);
     }
   }
+
+  free(seen);
+
   return count;
 }
 
